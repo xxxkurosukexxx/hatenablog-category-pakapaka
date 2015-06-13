@@ -8,6 +8,7 @@
 
 .hatena-module-category .categoryParent {
     padding-left: 0.3em;
+    cursor: pointer;
 }
 
 .hatena-module-category .archive-module-hide-button {
