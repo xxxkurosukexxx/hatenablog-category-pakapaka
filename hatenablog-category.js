@@ -11,9 +11,17 @@
                             .append($('<span></span>').addClass('categoryParent'));
 
         parent$.find('li').each(function() {
-                 if ($(this).text().trim().match(/^\[C\].*/)) { cUl$.append($(this).clone(true)); $(this).remove(); }
-            else if ($(this).text().trim().match(/^\[L\].*/)) { lUl$.append($(this).clone(true)); $(this).remove(); }
-            else if ($(this).text().trim().match(/^\[F\].*/)) { fUl$.append($(this).clone(true)); $(this).remove(); }
+            var _lT = $(this).text().trim();
+            if (_lT.match(/^\[C\].*/)) {
+                cUl$.append($(this).clone(true));
+                $(this).remove();
+            } else if (_lT.match(/^\[L\].*/)) {
+                lUl$.append($(this).clone(true));
+                $(this).remove();
+            } else if (_lT.match(/^\[F\].*/)) {
+                fUl$.append($(this).clone(true));
+                $(this).remove();
+            }
         });
 
         parent$.find('ul.hatena-urllist')
