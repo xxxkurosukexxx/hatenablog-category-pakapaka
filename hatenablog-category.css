@@ -2,7 +2,25 @@
     border-bottom: none;
 }
 
-.cUl, .lUl, .fUl {
+.hatena-module-category .archive-module-button {
+    opacity: 0.6;
+}
+
+.hatena-module-category .categoryParent {
+    padding-left: 0.3em;
+}
+
+.hatena-module-category .archive-module-hide-button {
+    display: none;
+}
+
+.hatena-module-category .archive-module-show-button {
+    display: inline;
+}
+
+.hatena-module-category .cUl,
+.hatena-module-category .lUl,
+.hatena-module-category .fUl {
     list-style: none;
     padding-left: 20px;
 }
