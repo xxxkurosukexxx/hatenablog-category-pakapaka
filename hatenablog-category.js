@@ -11,9 +11,9 @@
                             .append($('<span></span>').addClass('categoryParent'));
 
         parent$.find('li').each(function() {
-                 if ($(this).text().match(/\[C\].*/)) { cUl$.append($(this).clone(true)); $(this).remove(); }
-            else if ($(this).text().match(/\[L\].*/)) { lUl$.append($(this).clone(true)); $(this).remove(); }
-            else if ($(this).text().match(/\[F\].*/)) { fUl$.append($(this).clone(true)); $(this).remove(); }
+                 if ($(this).text().trim().match(/^\[C\].*/)) { cUl$.append($(this).clone(true)); $(this).remove(); }
+            else if ($(this).text().trim().match(/^\[L\].*/)) { lUl$.append($(this).clone(true)); $(this).remove(); }
+            else if ($(this).text().trim().match(/^\[F\].*/)) { fUl$.append($(this).clone(true)); $(this).remove(); }
         });
 
         parent$.find('ul.hatena-urllist')
