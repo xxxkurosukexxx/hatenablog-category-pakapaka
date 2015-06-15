@@ -49,6 +49,9 @@ $('hatena-module-category').pakapaka({
 </script>
 ```
 
+#### 設置例
+http://2438859.hatenablog.com  
+ページ下部のカテゴリ一覧参照。
 
 ### CSS
 デザインCSSに追加。
