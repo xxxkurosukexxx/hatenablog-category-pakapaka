@@ -71,6 +71,8 @@ http://2438859.hatenablog.com
 ```
 
 ## ライセンスなど
+This software is released under the MIT License, see LICENSE.txt.
+
 基本的に自分用に作ったので、自分のブログで使用させて頂いているテンプレート以外では動かない可能性があります。  
 その場合はどうぞforkして煮て焼いて食ってください。  
 
