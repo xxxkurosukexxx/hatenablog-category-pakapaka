@@ -1,0 +1,17 @@
+.hatena-urllist li:last-child {
+    border-bottom: none;
+}
+
+.hatena-module-category .archive-module-button {
+    opacity: 0.6;
+}
+
+.hatena-module-category .categoryParent {
+    padding-left: 0.3em;
+    cursor: pointer;
+}
+
+.pakapaka {
+    list-style: none;
+    padding-left: 20px;
+}
