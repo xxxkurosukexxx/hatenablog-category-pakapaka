@@ -17,8 +17,7 @@
      */
 
     $.fn.pakapaka = function (option) {
-        var $self = $.fn.pakapaka,
-            $this = this,
+        var $this = this,
             config,
             _config,
             $_target,
@@ -27,11 +26,12 @@
                             .append($('<span></span>').addClass('pakapakaParent')),
             $ulTpl = $('<ul></ul>').addClass('pakapaka'),
             $_parentLi,
-            $_ul;
+            $_ul,
+            $_li,
+            _lT;
 
         if (option.config === undefined || ! $.isArray(option.config)) {
-            alert('PakaPaka!!!');
-            return this;
+            return $this;
         }
 
         config = option.config;
@@ -40,14 +40,14 @@
             $_target = $(this);
 
             $.each(config, function() {
-                _c = this;
+                _config = this;
                 $_ul = $ulTpl.clone(true);
 
                 $_target.find('li').each(function () {
                     $_li = $(this);
                     _lT = $_li.text().trim();
 
-                    if (_lT.match(_c.regex)) {
+                    if (_lT.match(_config.regex)) {
                         $_ul.append($_li.clone(true));
                         $_li.remove();
                     }
@@ -55,13 +55,13 @@
                 }); //---each-li
 
                 $_parentLi = $parentLi.clone(true)
-                                .find('.pakapakaParent').text(_c.name).end()
+                                .find('.pakapakaParent').text(_config.name).end()
                                 .append($_ul)
                                 .click(function () {
                                     $(this).find('ul.pakapaka').slideToggle();
                                     $(this).find('.archive-module-button span').toggle();
                                 });
-                if (_c.open !== undefined && _c.open === true) {
+                if (_config.open !== undefined && _config.open === true) {
                     $_parentLi
                         .find('.archive-module-hide-button').show().end()
                         .find('.archive-module-show-button').hide().end()
